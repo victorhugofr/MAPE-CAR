@@ -14,8 +14,8 @@ public class Eventos extends Thread {
 	public void run(){
 		while(true){
 			try{
-				carro.evento();
 				Thread.sleep(20000);
+				carro.evento();
 				// LANÇA UM EVENTO A CADA 20000 SEGUNDOS
 				// REPITO O PROCESSO INFINITAMENTE. 
 			}catch(Exception e){

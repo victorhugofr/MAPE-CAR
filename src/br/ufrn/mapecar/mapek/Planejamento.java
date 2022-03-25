@@ -13,17 +13,18 @@ public class Planejamento {
 		String planos = "";
 		if(car.carroPertoFrente) {
 			planos += "Reduzir a velocidade; "; 
-			System.out.println("Plan: reduzir a velocidade");
+			System.out.println("Plan: "+planos);
 			executor.diminuirVelocidade(car);
 		}
 		if(car.pneuFrenteDireita < 30  ||
 				car.pneuFrenteEsquerda <30  ||
 				car.pneuTrasDireita<30  ||
 				car.pneuTrasEsquerda<30) {
-			planos += "Alertar urgência a ida ao posto.; "; 
+			planos += "Alertar urgência a ida ao posto; "; 
+			planos += "Reduzir a velocidade"; 
+			System.out.println("Plan: "+planos);
 			executor.diminuirVelocidade(car);
 		}
-		System.out.println("Plan: "+planos);
 	}
 
 	

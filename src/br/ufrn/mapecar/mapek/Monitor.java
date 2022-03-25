@@ -13,6 +13,4 @@ public class Monitor {
 		System.out.println(car.toString());
 		analisador.analisarCarro(car);
 	}
-	
-
 }

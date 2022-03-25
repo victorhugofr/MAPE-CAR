@@ -15,6 +15,9 @@ public class Analisador {
 		algoAFazer = false;
 		verificaAproximacao(car);
 		verificaPneus(car);
+		if(!algoAFazer) {
+			System.out.println("Analyze: Nada a ser feito");
+		}
 	}
 	
 	public void verificaPneus(Car car){
