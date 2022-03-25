@@ -15,8 +15,13 @@ public class Analisador {
 		algoAFazer = false;
 		verificaAproximacao(car);
 		verificaPneus(car);
+		verificaChuva(car);
+		verificaNeblina(car);
 		if(!algoAFazer) {
 			System.out.println("Analyze: Nada a ser feito");
+		}else {
+			planejamento.planCar(car);
+			
 		}
 	}
 	
@@ -26,7 +31,6 @@ public class Analisador {
 				car.pneuTrasDireita<30  ||
 				car.pneuTrasEsquerda<30) {
 			System.out.println("Analyze: Pneu está seco.");
-			planejamento.planCar(car);
 			algoAFazer = true;
 		}
 	}
@@ -34,7 +38,20 @@ public class Analisador {
 	public void verificaAproximacao(Car car){
 		if(car.carroPertoFrente==true) {
 			System.out.println("Analyze: O carro da frente está muito próximo");
-			planejamento.planCar(car);
+			algoAFazer = true;
+		}
+	}
+	
+	public void verificaChuva(Car car){
+		if(car.chuva==true) {
+			System.out.println("Analyze: Está chovendo forte");
+			algoAFazer = true;
+		}
+	}
+	
+	public void verificaNeblina(Car car){
+		if(car.neblina==true) {
+			System.out.println("Analyze: Neblina a frente");
 			algoAFazer = true;
 		}
 	}

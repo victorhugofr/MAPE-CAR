@@ -9,4 +9,16 @@ public class Executor {
 		car.carroPertoFrente = false;
 		car.velocidade -= 10;
 	}
+	public void alertarIdaPosto(Car car) {
+		car.idaAoPosto = true;
+		System.out.println("Executor: Alertando ida ao posto");
+	}
+	public void acenderFarol(Car car) {
+		System.out.println("Executor: Acendendo farol");
+		car.farol = true;
+	}
+	public void ligarPisca(Car car) {
+		System.out.println("Executor: Ligando pisca alerta");
+		car.piscaAlerta = true;
+	}
 }

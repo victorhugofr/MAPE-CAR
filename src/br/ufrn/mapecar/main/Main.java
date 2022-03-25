@@ -13,7 +13,7 @@ public class Main {
 		Car car = new Car();
 		new Eventos(car).start();
 		new MAPEK(car).start();
-		new Cronometro().start();
+		new Cronometro(car).start();
 	}
 
 }
